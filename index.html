@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planificador Simple</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>📚 Planificador de Estudio</h1>
+
+    <p>Añade tareas, márcalas como hechas y se guardarán automáticamente.</p>
+    <p>Este es un nuevo parrafo escrito a las 17:54 horas de un sábado</p>
+
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <form id="task-form" autocomplete="off">
+        <input id="task-input" type="text" placeholder="Nueva tarea (p.ej. 'Repasar Git 20 min')" required />
+        <button class="btn" type="submit">Añadir</button>
+      </form>
+
+      <ul id="task-list" class="list"></ul>
+
+      <div class="actions">
+        <button id="clear-done" class="btn ghost">Eliminar hechas</button>
+        <button id="clear-all" class="btn danger">Vaciar todo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Hecho con ♥ en HTML + CSS + JS</small>
+  </footer>
+</body>
+</html>

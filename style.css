@@ -1,0 +1,91 @@
+/* ===== Estilos básicos (solo CSS) ===== */
+* { box-sizing: border-box; }
+:root {
+  --bg: #f9f7ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #7c3aed;
+  --accent-2: #5b21b6;
+  --danger: #ef4444;
+  --ghost: #e5e7eb;
+  --shadow: 0 10px 25px rgba(0,0,0,.06);
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), #eef2ff 60%);
+}
+
+.header {
+  text-align: center;
+  padding: 48px 16px 32px;
+}
+.header h1 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 40px); }
+.header p { margin: 0; color: var(--muted); }
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+input[type="text"] {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+}
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+.btn:hover { background: var(--accent-2); border-color: var(--accent-2); }
+
+.btn.danger { border-color: var(--danger); background: var(--danger); }
+.btn.danger:hover { filter: brightness(.95); }
+
+.btn.ghost { background: var(--ghost); color: #111827; border-color: #d1d5db; }
+.btn.ghost:hover { filter: brightness(.97); }
+
+.list { list-style: none; margin: 16px 0 0; padding: 0; }
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.item.done .label { text-decoration: line-through; color: var(--muted); }
+.item .move { cursor: grab; user-select: none; }
+.item button { border: none; background: transparent; cursor: pointer; }
+.item .delete { color: var(--danger); }
+
+.actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
+
+.footer { text-align: center; color: var(--muted); padding: 28px; }
